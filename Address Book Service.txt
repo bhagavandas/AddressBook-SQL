@@ -89,3 +89,20 @@ mysql> select * from AddressBook where city='UP';
 +-----------+----------+---------+------+-------+--------+-------------+-------------------+
 1 row in set (0.00 sec)
 
+mysql> select COUNT(city) from AddressBook where city='Ongole';
++-------------+
+| COUNT(city) |
++-------------+
+|           1 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select COUNT(*) from AddressBook where city='Ongole';
++----------+
+| COUNT(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
+
