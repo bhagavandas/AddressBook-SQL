@@ -72,3 +72,20 @@ mysql> select * from AddressBook;
 +-------------+----------+---------+---------+-------+--------+-------------+-------------------+
 4 rows in set (0.00 sec)
 
+
+mysql> select city from AddressBook where city='UP';
++------+
+| city |
++------+
+| UP   |
++------+
+1 row in set (0.00 sec)
+
+mysql> select * from AddressBook where city='UP';
++-----------+----------+---------+------+-------+--------+-------------+-------------------+
+| firstname | lastname | address | city | State | zip    | PhoneNumber | email             |
++-----------+----------+---------+------+-------+--------+-------------+-------------------+
+| Shruthi   | S        | UP      | UP   | UP    | 500002 |  9700000000 | shruthi@gmail.com |
++-----------+----------+---------+------+-------+--------+-------------+-------------------+
+1 row in set (0.00 sec)
+
