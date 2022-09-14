@@ -3,4 +3,6 @@ Address Book Service
 mysql> create database AddressBook_Service;
 Query OK, 1 row affected (0.01 sec)
 
-   
+    "> ^C
+mysql> create table AddressBook(firstname varchar(20), lastname varchar(20),address varchar(20),city varchar(20),State varchar(20),zip int, PhoneNumber double);
+Query OK, 0 rows affected (0.05 sec)
