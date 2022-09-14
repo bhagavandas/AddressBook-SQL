@@ -39,3 +39,21 @@ mysql> select * from AddressBook;
 +-----------+----------+---------+---------+-------+--------+-------------+-------------------+
 6 rows in set (0.00 sec),
 
+
+mysql> update AddressBook set firstname='BhagavanDas' where firstname='Das';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from AddressBook;
++-------------+----------+---------+---------+-------+--------+-------------+-------------------+
+| firstname   | lastname | address | city    | State | zip    | PhoneNumber | email             |
++-------------+----------+---------+---------+-------+--------+-------------+-------------------+
+| BhagavanDas | K        | Ongole  | Ongole  | AP    |  52545 | 98888888885 | das@gmail.com     |
+| Rakesh      | Madhu    | Hyd     | Hyd     | TS    |  52545 | 98888888885 | rakesh@gmail.com  |
+| Rakesh      | Madhu    | Hyd     | Hyd     | TS    |  52545 | 98888888885 | rakesh@gmail.com  |
+| Anirban     | A        | Pune    | Pune    | pune  | 545425 |  9554555555 | anirban@gmail.com |
+| Ranjith     | R        | Kolkata | Kolkata | WB    | 500001 |  9000000008 | ranjith@gmail.com |
+| Shruthi     | S        | UP      | UP      | UP    | 500002 |  9700000000 | shruthi@gmail.com |
++-------------+----------+---------+---------+-------+--------+-------------+-------------------+
+6 rows in set (0.00 sec)
+
