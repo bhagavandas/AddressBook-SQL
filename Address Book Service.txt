@@ -106,3 +106,52 @@ mysql> select COUNT(*) from AddressBook where city='Ongole';
 1 row in set (0.00 sec)
 
 
+mysql> select SORT(*) from AddressBook where city='Ongole';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) from AddressBook where city='Ongole'' at line 1
+mysql> select firstname from AddressBook order by city;
++-------------+
+| firstname   |
++-------------+
+| Ranjith     |
+| BhagavanDas |
+| Anirban     |
+| Shruthi     |
+| Bhagavan    |
++-------------+
+5 rows in set (0.00 sec)
+
+mysql> select firstname from AddressBook order by city ASC;
++-------------+
+| firstname   |
++-------------+
+| Ranjith     |
+| BhagavanDas |
+| Anirban     |
+| Shruthi     |
+| Bhagavan    |
++-------------+
+5 rows in set (0.00 sec)
+
+mysql> select firstname from AddressBook order by State ASC;
++-------------+
+| firstname   |
++-------------+
+| BhagavanDas |
+| Anirban     |
+| Shruthi     |
+| Bhagavan    |
+| Ranjith     |
++-------------+
+5 rows in set (0.00 sec)
+
+mysql> select firstname from AddressBook order by firstname ASC;
++-------------+
+| firstname   |
++-------------+
+| Anirban     |
+| Bhagavan    |
+| BhagavanDas |
+| Ranjith     |
+| Shruthi     |
++-------------+
+5 rows in set (0.00 sec)
