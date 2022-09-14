@@ -6,3 +6,36 @@ Query OK, 1 row affected (0.01 sec)
     "> ^C
 mysql> create table AddressBook(firstname varchar(20), lastname varchar(20),address varchar(20),city varchar(20),State varchar(20),zip int, PhoneNumber double);
 Query OK, 0 rows affected (0.05 sec)
+
+mysql> insert into AddressBook(firstname, lastname, address, city, State, zip, PhoneNumber, email) values("Rakesh", "Madhu", "Hyd", "Hyd", "TS", 52545, 98888888885, "rakesh@gmail.com"),("Anirban", "A", "Pune", "Pune","pune",545425,9554555555,"anirban@gmail.com"),("Ranjith","R","Kolkata","Kolkata","WB",500001,9000000008,"ranjith@gmail.com"),("Shruthi","S","UP","UP","UP",500002,9700000000,"shruthi@gmail.com");
+    "> ^X
+    "> ^C
+mysql> insert into AddressBook(firstname, lastname, address, city, State, zip, PhoneNumber, email) values("Rakesh", "Madhu", "Hyd", "Hyd", "TS", 52545, 98888888885, "rakesh@gmail.com"),("Anirban", "A", "Pune", "Pune","pune",545425,9554555555,"anirban@gmail.com"),("Ranjith","R","Kolkata","Kolkata","WB",500001,9000000008,"ranjith@gmail.com"),("Shruthi","S","UP","UP","U500002,9700000000,"shruthi@gmail.com");
+    "> ^C
+mysql> insert into AddressBook(firstname, lastname, address, city, State, zip, PhoneNumber, email) values("Rakesh", "Madhu", "Hyd", "Hyd", "TS", 52545, 98888888885, "rakesh@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into AddressBook(firstname, lastname, address, city, State, zip, PhoneNumber, email) values("Anirban", "A", "Pune", "Pune","pune",545425,9554555555,"anirban@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into AddressBook(firstname, lastname, address, city, State, zip, PhoneNumber, email) values("Ranjith","R","Kolkata","Kolkata","WB",500001,9000000008,"ranjith@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into AddressBook(firstname, lastname, address, city, State, zip, PhoneNumber, email) values("Shruthi","S","UP","UP","U500002,9700000000,"shruthi@gmail.com");
+    "> ^C
+mysql> insert into AddressBook(firstname, lastname, address, city, State, zip, PhoneNumber, email) values("Shruthi","S","UP","UP","UP", 500002,9700000000,"shruthi@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from AddressBook;
++-----------+----------+---------+---------+-------+--------+-------------+-------------------+
+| firstname | lastname | address | city    | State | zip    | PhoneNumber | email             |
++-----------+----------+---------+---------+-------+--------+-------------+-------------------+
+| Das       | K        | Ongole  | Ongole  | AP    |  52545 | 98888888885 | das@gmail.com     |
+| Rakesh    | Madhu    | Hyd     | Hyd     | TS    |  52545 | 98888888885 | rakesh@gmail.com  |
+| Rakesh    | Madhu    | Hyd     | Hyd     | TS    |  52545 | 98888888885 | rakesh@gmail.com  |
+| Anirban   | A        | Pune    | Pune    | pune  | 545425 |  9554555555 | anirban@gmail.com |
+| Ranjith   | R        | Kolkata | Kolkata | WB    | 500001 |  9000000008 | ranjith@gmail.com |
+| Shruthi   | S        | UP      | UP      | UP    | 500002 |  9700000000 | shruthi@gmail.com |
++-----------+----------+---------+---------+-------+--------+-------------+-------------------+
+6 rows in set (0.00 sec),
+
