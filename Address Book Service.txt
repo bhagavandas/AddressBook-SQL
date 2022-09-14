@@ -57,3 +57,18 @@ mysql> select * from AddressBook;
 +-------------+----------+---------+---------+-------+--------+-------------+-------------------+
 6 rows in set (0.00 sec)
 
+
+mysql> delete from AddressBook where firstname='Rakesh';
+Query OK, 2 rows affected (0.00 sec)
+
+mysql> select * from AddressBook;
++-------------+----------+---------+---------+-------+--------+-------------+-------------------+
+| firstname   | lastname | address | city    | State | zip    | PhoneNumber | email             |
++-------------+----------+---------+---------+-------+--------+-------------+-------------------+
+| BhagavanDas | K        | Ongole  | Ongole  | AP    |  52545 | 98888888885 | das@gmail.com     |
+| Anirban     | A        | Pune    | Pune    | pune  | 545425 |  9554555555 | anirban@gmail.com |
+| Ranjith     | R        | Kolkata | Kolkata | WB    | 500001 |  9000000008 | ranjith@gmail.com |
+| Shruthi     | S        | UP      | UP      | UP    | 500002 |  9700000000 | shruthi@gmail.com |
++-------------+----------+---------+---------+-------+--------+-------------+-------------------+
+4 rows in set (0.00 sec)
+
