@@ -1,0 +1,6 @@
+Address Book Service
+
+mysql> create database AddressBook_Service;
+Query OK, 1 row affected (0.01 sec)
+
+   
