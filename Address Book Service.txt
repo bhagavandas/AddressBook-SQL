@@ -317,3 +317,67 @@ mysql> select * from addressbook;
 | David       | D        | Mumbai    | Mumbai  | Maharashtra | 500005 |  9800801145 | David@gmail.com   | Friends    |
 +-------------+----------+-----------+---------+-------------+--------+-------------+-------------------+------------+
 7 rows in set (0.00 sec)
+
+
+mysql> select * from AddressBook where city='UP';
++-----------+----------+---------+------+-------+--------+-------------+-------------------+---------+
+| firstname | lastname | address | city | State | zip    | PhoneNumber | email             | type    |
++-----------+----------+---------+------+-------+--------+-------------+-------------------+---------+
+| Shruthi   | S        | UP      | UP   | UP    | 500002 |  9700000000 | shruthi@gmail.com | Friends |
+| Bhagavan  | K        | UP      | UP   | UP    | 500002 |  9700000000 | das@gmail.com     | Family  |
++-----------+----------+---------+------+-------+--------+-------------+-------------------+---------+
+2 rows in set (0.01 sec)
+
+mysql> select COUNT(city) from AddressBook where city='Ongole';
++-------------+
+| COUNT(city) |
++-------------+
+|           1 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select COUNT(city) from AddressBook where city='Mumbai';
++-------------+
+| COUNT(city) |
++-------------+
+|           1 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select COUNT(city) from AddressBook where State='UP';
++-------------+
+| COUNT(city) |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select firstname from AddressBook order by firstname ASC;
++-------------+
+| firstname   |
++-------------+
+| Anirban     |
+| Bhagavan    |
+| BhagavanDas |
+| David       |
+| Kiran       |
+| Ranjith     |
+| Shruthi     |
++-------------+
+7 rows in set (0.00 sec)
+
+mysql> select COUNT(type) from addressbook where type='Friends';
++-------------+
+| COUNT(type) |
++-------------+
+|           3 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select COUNT(*) from addressbook where type='Friends';
++----------+
+| COUNT(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.00 sec)
