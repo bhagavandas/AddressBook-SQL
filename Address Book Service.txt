@@ -279,3 +279,41 @@ mysql> select COUNT(type) from addressbook where type='Profession';
 |           1 |
 +-------------+
 1 row in set (0.00 sec)
+
+
+mysql> insert into addressbook(firstName,lastname,address,city,State,zip,PhoneNumber,email,type) values("Kiran","K","Hyderabad","LBNagar","TS",500002,9800001145,"Family");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into addressbook(firstName,lastname,address,city,State,zip,PhoneNumber,email,type) values("Kiran","K","Hyderabad","LBNagar","TS",500002,9800001145,"kiran@gmail.com","Family");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from addressbook;
++-------------+----------+-----------+---------+-------+--------+-------------+-------------------+------------+
+| firstname   | lastname | address   | city    | State | zip    | PhoneNumber | email             | type       |
++-------------+----------+-----------+---------+-------+--------+-------------+-------------------+------------+
+| BhagavanDas | K        | Ongole    | Ongole  | AP    |  52545 | 98888888885 | das@gmail.com     | Family     |
+| Anirban     | A        | Pune      | Pune    | pune  | 545425 |  9554555555 | anirban@gmail.com | Profession |
+| Ranjith     | R        | Kolkata   | Kolkata | WB    | 500001 |  9000000008 | ranjith@gmail.com | Friends    |
+| Shruthi     | S        | UP        | UP      | UP    | 500002 |  9700000000 | shruthi@gmail.com | Friends    |
+| Bhagavan    | K        | UP        | UP      | UP    | 500002 |  9700000000 | das@gmail.com     | Family     |
+| Kiran       | K        | Hyderabad | LBNagar | TS    | 500002 |  9800001145 | kiran@gmail.com   | Family     |
++-------------+----------+-----------+---------+-------+--------+-------------+-------------------+------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into addressbook(firstName,lastname,address,city,State,zip,PhoneNumber,email,type) values("David","D","Mumbai","Mumbai","Maharashtra",500005,9800801145,"Friends");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into addressbook(firstName,lastname,address,city,State,zip,PhoneNumber,email,type) values("David","D","Mumbai","Mumbai","Maharashtra",500005,9800801145,"David@gmail.com","Friends");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from addressbook;
++-------------+----------+-----------+---------+-------------+--------+-------------+-------------------+------------+
+| firstname   | lastname | address   | city    | State       | zip    | PhoneNumber | email             | type       |
++-------------+----------+-----------+---------+-------------+--------+-------------+-------------------+------------+
+| BhagavanDas | K        | Ongole    | Ongole  | AP          |  52545 | 98888888885 | das@gmail.com     | Family     |
+| Anirban     | A        | Pune      | Pune    | pune        | 545425 |  9554555555 | anirban@gmail.com | Profession |
+| Ranjith     | R        | Kolkata   | Kolkata | WB          | 500001 |  9000000008 | ranjith@gmail.com | Friends    |
+| Shruthi     | S        | UP        | UP      | UP          | 500002 |  9700000000 | shruthi@gmail.com | Friends    |
+| Bhagavan    | K        | UP        | UP      | UP          | 500002 |  9700000000 | das@gmail.com     | Family     |
+| Kiran       | K        | Hyderabad | LBNagar | TS          | 500002 |  9800001145 | kiran@gmail.com   | Family     |
+| David       | D        | Mumbai    | Mumbai  | Maharashtra | 500005 |  9800801145 | David@gmail.com   | Friends    |
++-------------+----------+-----------+---------+-------------+--------+-------------+-------------------+------------+
+7 rows in set (0.00 sec)
